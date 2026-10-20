@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Horizon | TSA Webmaster</title>
+    <style>
+        /* Smooth Scrolling Trick */
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #fdfdff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Fixed Navigation Layout */
+        header {
+            background-color: #1a1a2e;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #00adb5;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #eeeeee;
+        }
+
+        /* Content Section Styling */
+        section {
+            padding: 100px 40px 60px 40px; /* Top padding keeps content below fixed nav */
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Section Background Alternation */
+        section:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        h2 {
+            color: #1a1a2e;
+            font-size: 32px;
+            border-left: 5px solid #00adb5;
+            padding-left: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Simple Style for the Interactive Component */
+        .simulator-box {
+            background: #1a1a2e;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .sim-btn {
+            background-color: #00adb5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .sim-btn:hover {
+            background-color: #008c95;
+        }
+
+        #sim-output {
+            margin-top: 15px;
+            font-family: monospace;
+            background: #0f0f1b;
+            padding: 10px;
+            border-left: 3px solid #00adb5;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AI Horizon</h1>
+    <nav>
+      <ul>
+        <!-- These href tags match the section IDs below -->
+        <li><a href="#home">Home</a></li>
+        <li><a href="#fundamentals">Fundamentals</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#ethics">Ethics</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </nav>
+</header>
+
+<!-- MAIN CONTENT CONTAINER -->
+<main style="margin-top: 80px;">
+
+    <!-- 1. HOME SECTION -->
+    <section id="home">
+        <h2>Welcome to AI Horizon</h2>
+        <p>Exploring the next frontier of artificial intelligence. This single-page web hub tracks the fundamental shifts, core developmental tools, structural ethics, and deep academic frameworks surrounding cognitive technologies.</p>
+    </section>
+
+    <!-- 2. FUNDAMENTALS SECTION -->
+    <section id="fundamentals">
+        <h2>AI Fundamentals</h2>
+        <p>At its base level, modern AI relies on neural networks, machine learning algorithms, and deep data models. By training mathematical systems on extensive data sets, architectures can synthesize complex predictive workflows without explicit hardcoded structures.</p>
+    </section>
+
+    <!-- 3. TOOLS SECTION -->
+    <section id="tools">
+        <h2>Development Tools</h2>
+        <p>Developers construct advanced frameworks using libraries like TensorFlow, PyTorch, and unified layout systems. Below is a simulation testing an API response from a live training pipeline node.</p>
+        
+        <!-- Interactive Prompt Simulator Block -->
+        <div class="simulator-box">
+            <h3>Interactive Learning API Node</h3>
+            <button class="sim-btn" onclick="runSimulation('deep-learning')">Test Node A</button>
+            <button class="sim-btn" onclick="runSimulation('nlp')">Test Node B</button>
+            <div id="sim-output">// Terminal standby. Click a node to ping...</div>
+        </div>
+    </section>
+
+    <!-- 4. ETHICS SECTION -->
+    <section id="ethics">
+        <h2>Ethics & Frameworks</h2>
+        <p>Scaling automated inference intelligence introduces massive structural responsibilities. Evaluating algorithmic bias, verifying explicit data sourcing parameters, protecting consumer identity vectors, and maintaining human oversight models remain highly critical objectives.</p>
+    </section>
+
+    <!-- 5. REFERENCES SECTION -->
+    <section id="references">
+        <h2>Documentation & References</h2>
+        <p>This layout adheres to the core rules of standard engineering systems, validating semantic clean data separation guidelines outlined across official national web design frameworks.</p>
+    </section>
+
+</main>
+
+<script>
+    // Micro Javascript tool handler to make the interactive box run live
+    function runSimulation(type) {
+        const output = document.getElementById('sim-output');
+        if (type === 'deep-learning') {
+            output.innerText = "PING SENT...\nSTATUS: 200 OK\nPayload: Neural mesh successfully initiated. Loss value: 0.024";
+        } else if (type === 'nlp') {
+            output.innerText = "PING SENT...\nSTATUS: 200 OK\nPayload: Context parser initialized. Tokens synthesized successfully.";
+        }
+    }
+</script>
+
+</body>
+</html>
+
